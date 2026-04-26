@@ -128,19 +128,29 @@ h2 {
 
 .tarjetas-contenedor {
     display: flex;
+    flex-direction: row;
+    /* Fuerza a que sea fila */
     justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    max-width: 1200px;
+    align-items: stretch;
+    /* Para que ambas tarjetas tengan la misma altura */
+    gap: 20px;
+    width: 95%;
+    /* Usamos porcentaje para que se adapte a cualquier pantalla */
+    max-width: 1100px;
     margin: 0 auto;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
+    /* El !important obliga a que NUNCA se bajen */
 }
 
 .tarjeta-izq img,
 .tarjeta-der img {
-    flex: 1;
-    max-width: 500px;
-    min-width: 300px;
+    width: 100%;
+    max-width: 100%;
+    /* Evita que la imagen desborde la tarjeta */
+    height: 300px;
+    /* Altura fija para que se vean parejas */
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .btn-ir {
@@ -165,6 +175,15 @@ h2 {
 
 .tarjeta-der {
     transform: translateX(150px);
+}
+
+.tarjeta-izq,
+.tarjeta-der {
+    width: 50%;
+    /* Cada una ocupa exactamente la mitad */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .revelar.active {
@@ -282,6 +301,7 @@ body.dark-mode .resultado-superp h2 {
     perspective: 1500px;
     overflow: visible;
 }
+
 
 .item-img {
     flex: 0 0 auto;
