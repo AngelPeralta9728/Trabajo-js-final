@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación e Historia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="logo-container">
+                <svg class="computadora-svg" viewBox="0 0 100 100">
+                    <path class="draw-path" d="M20 20 H80 V60 H20 Z M15 60 H85 V70 H15 Z M40 70 L35 80 H65 L60 70" />
+                    <g class="pantalla-lineas">
+                        <line x1="25" y1="30" x2="75" y2="30" />
+                        <line x1="25" y1="40" x2="75" y2="40" />
+                        <line x1="25" y1="50" x2="75" y2="50" />
+                    </g>
+                </svg>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="juguemos.html">JUGUEMOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>PROGRAMACIÓN E HISTORIA</h1>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="seccion-titulo">CONTENIDO</h2>
+
+            <div class="cards-container">
+                <div class="reveal slide-card-left">
+                    <img src="assets/imagenes/historia-programacion.jpg" alt="Historia">
+                    <p>Conozcamos un poco sobre la historia de la programación</p>
+                    <a href="historia.html" class="btn-ir">IR A HISTORIA</a>
+                </div>
+
+                <div class="reveal slide-card-right">
+                    <img src="assets/imagenes/img2.jpg" alt="Juegos">
+                    <p>Vamos a jugar un poco utilizando métodos aprendidos en clase</p>
+                    <a href="juguemos.html" class="btn-ir">IR A JUEGO</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo-box"><img src="assets/imagenes/logo.png" alt="Logo" class="footer-img"></div>
+                <div class="footer-title">
+                    <p>PROGRAMACION</p>
+                    <p>E</p>
+                    <p>HISTORIA</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Sitio con fines educativos - Creado por Angel Peralta</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

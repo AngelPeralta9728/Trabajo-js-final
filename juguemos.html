@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguemos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <nav>
+            <div class="logo-container">
+                <svg class="computadora-svg" viewBox="0 0 100 100">
+                    <path class="draw-path" d="M20 20 H80 V60 H20 Z M15 60 H85 V70 H15 Z M40 70 L35 80 H65 L60 70" />
+                    <g class="pantalla-lineas">
+                        <line x1="25" y1="30" x2="75" y2="30" />
+                        <line x1="25" y1="40" x2="75" y2="40" />
+                        <line x1="25" y1="50" x2="75" y2="50" />
+                    </g>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="juguemos.html">JUGUEMOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('assets/imagenes/img2.jpg');">
+            <div class="hero-superposicion"></div>
+            <div class="hero-content">
+                <h1>JUGUEMOS UN POCO</h1>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="juego-mezclado">
+                <h2 class="seccion-titulo" id="instrucciones">Armemos el rompecabezas y veamos que imagen es...</h2>
+
+                <div id="area-juego">
+                    <div class="puzzle-tablero" id="tablero">
+                        <div class="zona-drop" data-id="Rompe1"><span>Arrastre aquí</span></div>
+                        <div class="zona-drop" data-id="Rompe2"><span>Arrastre aquí</span></div>
+                        <div class="zona-drop" data-id="Rompe3"><span>Arrastre aquí</span></div>
+                    </div>
+
+                    <div class="piezas-container" id="caos-container">
+                        <img src="assets/imagenes/rompe3.png" draggable="true" id="Rompe3" class="piece"
+                            data-id="Rompe3" alt="Pieza 3">
+                        <img src="assets/imagenes/rompe1.png" draggable="true" id="Rompe1" class="piece"
+                            data-id="Rompe1" alt="Pieza 1">
+                        <img src="assets/imagenes/rompe2.png" draggable="true" id="Rompe2" class="piece"
+                            data-id="Rompe2" alt="Pieza 2">
+                    </div>
+                </div>
+
+                <div id="resultado-final" style="display: none;">
+                    <div id="resultado-superp" class="resultado-superp"></div>
+                    <button class="btn-reiniciar" id="btn-reiniciar">REINICIAR</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contenedor">
+            <div class="footer-izq">
+                <div class="footer-logo-box"><img src="assets/imagenes/logo.png" alt="Logo" class="footer-img"></div>
+                <div class="footer-titulo">
+                    <p>PROGRAMACION</p>
+                    <p>E</p>
+                    <p>HISTORIA</p>
+                </div>
+            </div>
+            <div class="footer-der">
+                <p>Sitio con fines educativos - Creado por Angel Peralta</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
