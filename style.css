@@ -113,22 +113,10 @@ h2 {
 
 /* CONTENIDO Y TARJETAS */
 
-.content-section {
-    padding: 100px 20px;
-    text-align: center;
-    background: #FFFFFF;
-}
-
-.seccion-titulo {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: #2F3645;
-}
-
-
+/* --- SECCIÓN DE TARJETAS (CONTENEDOR) --- */
 .tarjetas-contenedor {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     justify-content: center;
     align-items: stretch;
     gap: 20px;
@@ -136,12 +124,23 @@ h2 {
     max-width: 1100px;
     margin: 0 auto;
     flex-wrap: nowrap !important;
+    overflow: hidden;
+}
+
+/* --- LAS TARJETAS (IZQ Y DER) --- */
+.tarjeta-izq,
+.tarjeta-der {
+    flex: 1 1 50% !important;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1.2s ease-out;
 }
 
 .tarjeta-izq img,
 .tarjeta-der img {
     width: 100%;
-    max-width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 4px;
@@ -155,21 +154,15 @@ h2 {
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 3px;
+    transition: background 0.3s;
 }
 
+.btn-ir:hover {
+    background: #4a5568;
+}
 
 .revelar {
     opacity: 0;
-    transition: all 1.2s ease-out;
-}
-
-.tarjeta-izq,
-.tarjeta-der {
-    flex: 1 1 50%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     transition: all 1.2s ease-out;
 }
 
@@ -183,9 +176,12 @@ h2 {
 
 .revelar.active {
     opacity: 1;
-    transform: translateX(0);
 }
 
+.revelar.active .tarjeta-izq,
+.revelar.active .tarjeta-der {
+    transform: translateX(0);
+}
 
 footer {
     background-color: #2F3645;
@@ -391,6 +387,17 @@ body.dark-mode .resultado-superp h2 {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 5px #000000;
+}
+
+.video-container-custom video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-controls button img {
+    width: 20px;
+    height: 20px;
 }
 
 .video-duration {

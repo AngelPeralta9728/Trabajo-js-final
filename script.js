@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const playBtn = document.getElementById('playBtn');
     const pauseBtn = document.getElementById('pauseBtn');
 
-    console.log("Video detectado:", video); // Esto saldrá en la consola (F12)
+    console.log("Video detectado:", video);
 
     if (video && playBtn && pauseBtn) {
         playBtn.onclick = () => {
