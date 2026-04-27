@@ -43,9 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const playBtn = document.getElementById('playBtn');
     const pauseBtn = document.getElementById('pauseBtn');
 
+    console.log("Video detectado:", video); // Esto saldrá en la consola (F12)
+
     if (video && playBtn && pauseBtn) {
-        playBtn.addEventListener('click', () => video.play());
-        pauseBtn.addEventListener('click', () => video.pause());
+        playBtn.onclick = () => {
+            console.log("Diste play");
+            video.play();
+        };
+        pauseBtn.onclick = () => {
+            console.log("Diste pausa");
+            video.pause();
+        };
+    } else {
+        console.error("No se encontraron los elementos del video");
     }
 });
 
